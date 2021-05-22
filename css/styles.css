@@ -1,3 +1,19 @@
+/*font-style: normal;
+font-weight: normal (у текстів);
+font-weight: bold або 500 (у заголовків);
+color: #757575 (у текстів, у телефона в хедері)
+color: #212121 (у заголовків, в хедері)
+в футері адреса color:  #FFFFFF;
+тел., електронка color: rgba(255, 255, 255, 0.6);  
+letter-spacing: 0.03em (у лого, у текстів, в футері)
+letter-spacing: 0.06em (в герої та у заголовків портфоліо)
+letter-spacing: 0.02em (в хедері, крім лого);
+background и color: #2196F3 (акцентний блакитний колір);
+text-transform: uppercase; (у заголовка в герої та заголовків основних меседжів)
+*/
+
+
+
 /*Variables*/
 :root {
 --main-font: 'Roboto', sans-serif;
@@ -5,8 +21,12 @@
 --main-text-color: #212121;
 --small-text-color: #757575;
 --accent-color: #2196F3;
---background-color: #FFFFFF;
+--white-color: #FFFFFF;
 --accent-background-color: #2F303A;
+--font-weigt-normal: 'normal';
+--font-weigt-bold: bold;
+--font-weigt-500: 500;
+
 }
 */ {
     box-sizing: border-box;
@@ -16,8 +36,9 @@
 
 body {
     font-family: var(--main-font);
-    color: var(--main-text-color);
-    background-color: var(--background-color);
+    font-style: normal;
+    letter-spacing: 0.03em;
+    background-color: var(--white-color);
 }
 a {
     color: inherit;
@@ -26,53 +47,55 @@ a {
 ul {
     list-style: none;
 }
-
+button {
+    font-family: inherit;
+}
 .pointer-button { cursor: pointer; }
 
 /* HEADER STYLES */
 .logo {
     color: var(--main-text-color);
     font-family: var(--accent-font);
-    font-style: normal;
-    font-weight: bold;
+    font-weight: var(--font-weigt-bold);
     font-size: 26px;
     line-height: 1.192;
+    letter-spacing: 0.03em;
 }
-.logo-white {color: #FFFFFF;
+.logo-white {color: var(--white-color);
     font-family: var(--accent-font);
-    font-style: normal;
-    font-weight: bold;
+    font-weight: var(--font-weigt-bold);
     font-size: 26px;
     line-height: 1.192;
+    letter-spacing: 0.03em;
 }
-
 .logo-accent {color: var(--accent-color);}
 
 .header {
-    font-style: normal;
-    font-weight: 500;
+    font-weight: var(--font-weigt-500);
     font-size: 14px;
     line-height: 1.143;
+    letter-spacing: 0.02em;
     }
 .address {color: var(--small-text-color);}
 .nav-color:hover {color: var(--accent-color);}
 .nav-color:focus {color: var(--accent-color);}
 
 /*HERO Styles*/
-.hero {
-    color: #FFFFFF;
-    font-style: normal;
+.hero h1 {
+    color: var(--white-color);
     font-weight: 900;
     font-size: 44px;
     line-height: 1.364;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
     background-color: var(--accent-background-color);
     }
 .hero-button {
-    color: #FFFFFF;
-    font-style: normal;
-    font-weight: bold;
+    color: var(--white-color);
+    font-weight: var(--font-weigt-bold);
     font-size: 16px;
     line-height: 1.875;
+    letter-spacing: 0.06em;
     width: 200px;
     height: 50px;
     left: 700px;
@@ -85,15 +108,14 @@ ul {
 /*Main-messages styles*/
 h3 {
     color: var(--main-text-color);
-    font-style: normal;
-    font-weight: bold;
+    font-weight: var(--font-weigt-bold);
     font-size: 14px;
     line-height: 1.143;
+    text-transform: uppercase;
     }
     .main-messag{
     color: var(--small-text-color);
-    font-style: normal;
-    font-weight: normal;
+    font-weight: var(--font-weigt-normal);
     font-size: 14px;
     line-height: 1.714;
     }
@@ -101,24 +123,21 @@ h3 {
 /*<!--Чим ми займаємося--> <!--Наша команда--> styles*/
 h2 {
     color: var(--main-text-color);
-    font-style: normal;
-    font-weight: bold;
+    font-weight: var(--font-weigt-bold);
     font-size: 36px;
     line-height: 1.167;
     }
 .team {
     color: var(--small-text-color);
-    font-style: normal;
-    font-weight: normal;
+    font-weight: var(--font-weigt-normal);
     font-size: 16px;
     line-height: 1.188;
     }
 h4 {
     color: var(--main-text-color);
-    font-style: normal;
-    font-weight: 500;
+    font-weight: var(--font-weigt-500);
     font-size: 16px;
-    line-height: 19px;
+    line-height: 1.188;
     }
 
 /*portfolio-button styles*/
@@ -132,38 +151,41 @@ h4 {
     border-radius: 4px;
 }
 .all-portfolio-button:hover {background: var(--accent-color);
-    color: #FFFFFF;}
-
+    color: var(--white-color);}
 .portfolio-button {
     color: var(--main-text-color);
-    font-style: normal;
-    font-weight: 500;
+    font-weight: var(--font-weigt-500);
     font-size: 16px;
     line-height: 1.625;
     }
-
-/*img-portfolio-button styles*/
-.img-portfolio-button {
+.portfolio-button button {background: #F5F4FA;}
+    
+/*img-portfolio styles*/
+.img-portfolio {
     color: var(--main-text-color);
-    font-style: normal;
-    font-weight: normal;
+    font-weight: var(--font-weigt-normal);
     font-size: 16px;
-    line-height: 30px;
-    }
-h5 {
-    color: var(--main-text-color);
-    font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
     line-height: 1.875;
+    }
+.img-portfolio h2 {
+    color: var(--main-text-color);
+    font-weight: var(--font-weigt-bold);
+    font-size: 18px;
+    line-height: 2.000;
+    letter-spacing: 0.06em;
     }
 
 /*footer styles*/
 .footer{
-    color: #FFFFFF;
+    color: var(--white-color);
     font-style: normal;
-    font-weight: normal;
+    font-weight: var(--font-weigt-normal);
     font-size: 14px;
     line-height: 1.714;
+    letter-spacing: 0.03em;
     background-color: var(--accent-background-color);
     }
+.footer-nav-color {
+    color:rgba(255, 255, 255, 0.6);
+    font-style: normal;
+}
