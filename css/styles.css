@@ -49,6 +49,7 @@ ul {
 }
 button {
     font-family: inherit;
+    font-style: inherit;
 }
 .pointer-button { cursor: pointer; }
 
@@ -71,6 +72,7 @@ button {
 .logo-accent {color: var(--accent-color);}
 
 .header {
+    color: var(--small-text-color);
     font-weight: var(--font-weigt-500);
     font-size: 14px;
     line-height: 1.143;
@@ -143,13 +145,9 @@ h4 {
 /*portfolio-button styles*/
 .all-portfolio-button {
     color: var(--main-text-color);
-    width: 73px;
-    height: 38px;
-    left: 495px;
-    top: 174px;
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-    border-radius: 4px;
-}
+    font-size: 16px;
+    line-height: 1.625;
+   }
 .all-portfolio-button:hover {background: var(--accent-color);
     color: var(--white-color);}
 .portfolio-button {
